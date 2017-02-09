@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Winter Scarves</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- replace with your personal Font Awesome CDN link -->
+    <script src="https://use.fontawesome.com/41152f626f.js"></script>
+  </head>
+
+<!--
+## Requirements
+  - Site layout looks good on all sizes of devices. At a minimum, elements are proportionally styled 
+    and aside element changes location and layout at different screen sizes. This should be tested 
+    using a variety of devices and at least one online browser compatiblity testing tool.
+  - The page is populated with items via Javascript building HTML with attributes from JSON data.
+  - Nav and product container elements are styled using flexbox.
+  - Appropriately sized images are served up based on size of user's device.
+  - User can add and remove items from their cart, which changes cart count number at top of page.
+  - Products can be sorted by different attributes using the filter form.
+  - This README is updated to include information about the testing steps taken to ensure site quality.
+  - Site is live on GH Pages hosting.
+-->
+    
+<!--
+## Week4:
+Write code to loop through items JSON and print out "name" and "price" attributes for each object to the console.
+Code HTML for a single item in `<div class="item">`.
+Use dummy content or some pulled from one of the JSON objects for the name, description, and price.
+This is a template that we'll later use when we populate the page with all the objects.  
+-->
+    
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#hats">Hats</a></li>
+          <li><a href="#gloves">Gloves</a></li>
+          <li><a href="#scarves">Scarves</a></li>
+          <li class="cart-info">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+
+      <h1>Winter Wear Warehouse</h1>
+    </header>
+
+    <aside>
+      <form>
+        <label>Filter By:
+          <select name="filter">
+            <option value="">Choose One</option>
+            <option value="price">Price</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+
+        <input type="submit" value="Sort">
+      </form>
+    </aside>
+    <hr/> <!-- placeholder divider -->
+    <section>
+      <h2 id="hats">Hats</h2>
+
+      <div class="item-container">
+        <div class="item">
+          <!-- code template for a single item will go here -->
+        </div>
+      </div>
+    </section>
+    <hr/><!-- placeholder divider -->
+    <section>
+      <h2 id="gloves">Gloves</h2>
+
+      <div class="item-container">
+        <div class="item">
+          <!-- code template for a single item will go here -->
+        </div>
+      </div>
+    </section>
+    <hr/><!-- placeholder divider -->
+    <section>
+      
+      <h2 id="scarves">Scarves</h2>
+
+      <div class="item-container">
+        <div class="item">
+          <!-- code template for a single item will go here -->
+          <div class="item-value"><img src="images/reversible-plaid.jpg" alt="Reveresible Plaid"></div>
+          <div class="item-value">Reversible Plaid</div>
+          <div class="item-value">Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</div>
+          <div class="item-value">26.99</div>
+        </div>
+        <div class="item">
+          <!-- code template for a single item will go here -->
+          <div class="item-value"><img src="images/wool-cable.jpeg" alt="Wool Cable Knit"></div>
+          <div class="item-value">Wool Cable Knit</div>
+          <div class="item-value">Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</div>
+          <div class="item-value">49.99</div>
+        </div>
+      </div>
+      
+    </section>
+    <hr/> <!-- placeholder divider -->
+    <footer>
+
+    </footer>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/products.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
