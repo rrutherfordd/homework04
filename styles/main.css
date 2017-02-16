@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* ++ Reference: https://www.sitepoint.com/responsive-fluid-width-variable-item-navigation-css/ ++ */
 nav {
   width: 100%;
@@ -27,6 +33,7 @@ nav ul li {
   width: 16.6667%; /* fallback for non-calc() browsers */
   width: calc(100% / 6);
   box-sizing: border-box;
+  background: #ffeebb;
 }
 
 nav ul li:first-child {
@@ -51,6 +58,43 @@ nav ul li a {
 }
 /* ++ Reference: https://www.sitepoint.com/responsive-fluid-width-variable-item-navigation-css/ ++ */
 
+/* ++ Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes ++ */
+
+#main {
+  min-height: 10px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row;
+}
+
+#main > article {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #cccc33;
+  border-radius: 7pt;
+  background: #dddd88;
+  flex: 3 1 50%;
+  order: 2;
+}
+
+#main > aside {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #8888bb;
+  border-radius: 7pt;
+  background: #ccccff;
+  flex: 1 6 50%;
+  order: 3;
+}
+
+
+/* ++ Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes ++ */
+
+header h1 {
+  height: 25px;
+}
+
 /* ++ http://callmenick.com/post/flexbox-examples ++ */
 .item-container {
   border: solid 1px #e7e7e7;
@@ -68,3 +112,13 @@ nav ul li a {
 }
 
 /* ++ http://callmenick.com/post/flexbox-examples ++ */
+
+footer {
+  display: block;
+  margin: 4px;
+  padding: 5px;
+  min-height: 25px;
+  border: 1px solid #eebb55;
+  border-radius: 7pt;
+  background: #ffeebb;
+}
