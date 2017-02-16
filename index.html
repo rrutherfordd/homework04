@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Winter Scarves</title>
+    <title>Winter Wear</title>
 
     <meta charset="utf-8">
 
@@ -28,12 +28,17 @@
     
 <!--
 ## Week4:
-Write code to loop through items JSON and print out "name" and "price" attributes for each object to the console.
-Code HTML for a single item in `<div class="item">`.
-Use dummy content or some pulled from one of the JSON objects for the name, description, and price.
-This is a template that we'll later use when we populate the page with all the objects.  
+  - Write code to loop through items JSON and print out "name" and "price" attributes for each object to the console.
+  - Code HTML for a single item in `<div class="item">`.
+  - Use dummy content or some pulled from one of the JSON objects for the name, description, and price.
+  - This is a template that we'll later use when we populate the page with all the objects.  
 -->
-    
+<!--
+## Week5:
+  - Code basic CSS for page, creating a fluid if not yet responsive layout.
+  - Implement a responsive grid system of your own design, or use a library, or don't use a grid at all.
+  - Be sure all important size values are proportional (em, rem, %). Nav and item-container elements should be styled as flexbox containers.
+-->
   <body>
     <header>
       <nav>
@@ -46,23 +51,24 @@ This is a template that we'll later use when we populate the page with all the o
           </li>
         </ul>
       </nav>
-
-      <h1>Winter Wear Warehouse</h1>
     </header>
-
-    <aside>
-      <form>
-        <label>Filter By:
-          <select name="filter">
-            <option value="">Choose One</option>
-            <option value="price">Price</option>
-            <option value="name">Name</option>
-          </select>
-        </label>
-
-        <input type="submit" value="Sort">
-      </form>
-    </aside>
+    <div id="main">
+      <article>
+        <h1>Winter Wear Warehouse</h1>
+      </article>
+      <aside>
+        <form name="productFilter" onsubmit="capture()">
+          <label>Filter By:
+            <select name="filter">
+              <option value="">Choose One</option>
+              <option value="price">Price</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+          <input type="submit" value="Submit">
+        </form>
+      </aside>
+    </div>
     <hr/> <!-- placeholder divider -->
     <section>
       <h2 id="hats">Hats</h2>
@@ -108,11 +114,10 @@ This is a template that we'll later use when we populate the page with all the o
     </section>
     <hr/> <!-- placeholder divider -->
     <footer>
-
+      <p>Copyright &copy; 2/16/2017 by Robert M. Rutherford</p>
     </footer>
 
     <!-- Javascript -->
-    <script type="text/javascript" src="js/products.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
