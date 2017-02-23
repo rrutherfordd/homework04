@@ -12,7 +12,7 @@ var products = [
       "name": "Reversible Plaid",
       "price": 26.99,
       "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-      "imageTitle": "reversible-plaid.jpg"
+      "imageTitle": "reversible-plaid.jpeg"
     },
     {
       "name": "Wool Cable Knit",
@@ -24,13 +24,13 @@ var products = [
       "name": "Northern Lights",
       "price": 29.99,
       "description": "Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.",
-      "imageTitle": "northern-lights.jpg"
+      "imageTitle": "northern-lights.jpeg"
     },
     {
       "name": "Ombre Infinity",
       "price": 11.99,
       "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
-      "imageTitle": "ombre-infinity.jpg"
+      "imageTitle": "ombre-infinity.jpeg"
     },
     {
       "name": "Fringed Plaid",
@@ -48,13 +48,13 @@ var products = [
       "name": "Etro Paisley-Print Silk",
       "price": 249.99,
       "description": "Luxurious silk scarf with subtle paisley pattern. 100% silk",
-      "imageTitle": "etro.jpg"
+      "imageTitle": "etro.png"
     },
     {
       "name": "Ashby Twill",
       "price": 70.99,
       "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
-      "imageTitle": "twill.jpg"
+      "imageTitle": "twill.jpeg"
     }
   ];
 
@@ -70,9 +70,9 @@ for (key in products) {
     window.alert(products[key].price);
     window.alert(products[key].imageTitle);
     DEBUG */
-    window.console.log(products[key].name);
-    window.console.log(products[key].description);
-    window.console.log(products[key].price);
+    window.console.log(key + ": " + products[key].name);
+    window.console.log(key + ": " + products[key].description);
+    window.console.log(key + ": " + products[key].price);
   }
 }
 
@@ -83,4 +83,15 @@ function capture() {
   window.console.log("Submit capture");
   window.console.log(document.productFilter.filter.value);
   event.preventDefault();
+}
+
+function sumPrices(cartArray) {
+  "use strict";
+  var total, i;
+  total = i = 0;
+  for (i = 0; i < cartArray.length; i += 1) {
+    window.console.log(cartArray[i].price);
+    total = total + cartArray[i].price;
+  }
+  window.console.log(total);
 }
