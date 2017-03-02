@@ -1,16 +1,25 @@
+/* Colors
+  #F2EFE4
+  #CB8C1D
+  #4C3327
+  #BD3632
+*/
+
 body {
   display: flex;
   flex-direction: column;
+  background-color: #4C3327;
+  /* background-image: image("snowflakes_white.png"); */
 }
-
 
 /* ++ Reference: https://www.sitepoint.com/responsive-fluid-width-variable-item-navigation-css/ ++ */
 nav {
-  width: 100%;
+  width: 98%;
   /* */
   background: #f0f0f0;
   border: 1px solid #ccc;
   border-right: none;
+  margin-left: 1%;
 }
 
 nav ul {
@@ -33,7 +42,9 @@ nav ul li {
   width: 16.6667%; /* fallback for non-calc() browsers */
   width: calc(100% / 6);
   box-sizing: border-box;
-  background: #ffeebb;
+  background: #CB8C1D;
+  font-family: cursive;
+  font-size: large;
 }
 
 nav ul li:first-child {
@@ -45,7 +56,7 @@ nav ul li a {
   display: block;
   /* */
   text-decoration: none;
-  color: #616161;
+  color: black;
   padding: 10px 0;
 }
 
@@ -53,7 +64,7 @@ nav ul li a {
   display: block;
   /* */
   text-decoration: none;
-  color:  #616161;
+  color:  black;
   padding: 10px 0;
 }
 /* ++ Reference: https://www.sitepoint.com/responsive-fluid-width-variable-item-navigation-css/ ++ */
@@ -68,14 +79,17 @@ nav ul li a {
   flex-flow: row;
 }
 
-#main > article {
+header h1 {
   margin: 4px;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #cccc33;
   border-radius: 7pt;
-  background: #dddd88;
+  background: #F2EFE4;
   flex: 3 1 50%;
   order: 2;
+  font-family: cursive;
+  font-size: x-large;
+  text-align: center;
 }
 
 #main > aside {
@@ -83,9 +97,10 @@ nav ul li a {
   padding: 5px;
   border: 1px solid #8888bb;
   border-radius: 7pt;
-  background: #ccccff;
+  background: #BD3632;
   flex: 1 6 50%;
   order: 3;
+  font-family: cursive;
 }
 
 
@@ -98,20 +113,50 @@ header h1 {
 /* ++ http://callmenick.com/post/flexbox-examples ++ */
 .item-container {
   border: solid 1px #e7e7e7;
+  margin: 1%;
 }
+
 
 .item {
  display: flex;
 }
 
 .item-value {
-  flex: 1;
+  flex: 0 1 auto;
   padding: 12px;
   border: solid 1px #e7e7e7;
   width: 24%;
 }
 
+@media(max-width: 400px) {
+  .item-value {width: 90%;}
+}
+
 /* ++ http://callmenick.com/post/flexbox-examples ++ */
+
+img:after {  
+  content: attr(alt);
+  font-size: 16px;      
+  color: rgb(100, 100, 100);
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+section {
+  background-color: white;
+}
+
+section h2 {
+  margin: 1%;
+  font-family: cursive;
+  font-size: large;
+}
 
 footer {
   display: block;
@@ -120,5 +165,6 @@ footer {
   min-height: 25px;
   border: 1px solid #eebb55;
   border-radius: 7pt;
-  background: #ffeebb;
+  background: #F2EFE4;
+  font-family: cursive;
 }
